@@ -7,8 +7,6 @@ import ru.student.geometry.Square;
 import ru.student.geometry.Triangle;
 import ru.student.geometry.Point;
 import ru.student.tree.BinarySearchTree;
-import ru.student.city.City;
-import ru.student.city.TwoWayCity;
 import ru.student.geometry.PolygonalChain;
 import ru.student.geometry.Line;
 import ru.student.util.LengthUtils;
@@ -46,8 +44,7 @@ public class Main {
         System.out.println("Выберите задание:");
         System.out.println("1. Геометрические фигуры");
         System.out.println("2. Бинарное дерево");
-        System.out.println("3. Города и дороги");
-        System.out.println("4. Работа с точками и ломаными");
+        System.out.println("3. Работа с точками и ломаными");
         System.out.println("0. Выход");
 
         System.out.print("Ваш выбор: ");
@@ -137,38 +134,7 @@ public class Main {
                 System.out.println("Дерево после удаления: " + tree);
 
                 break;
-
             case 3:
-                System.out.println("\n--- ГОРОДА И ДОРОГИ ---");
-
-                TwoWayCity cityA = new TwoWayCity("A");
-                TwoWayCity cityB = new TwoWayCity("B");
-                TwoWayCity cityC = new TwoWayCity("C");
-
-                cityA.addRoad(cityB, 10);
-                cityB.addRoad(cityC, 20);
-
-                System.out.println("Созданы города A, B и C.");
-
-                System.out.println("\nДороги из города A:");
-                for (City city : cityA.getRoads().keySet()) {
-                    System.out.println(
-                            cityA.getName() + " -> " + city.getName()
-                                    + ": " + cityA.getDistance(city)
-                    );
-                }
-
-                System.out.println("\nДороги из города B:");
-                for (City city : cityB.getRoads().keySet()) {
-                    System.out.println(
-                            cityB.getName() + " -> " + city.getName()
-                                    + ": " + cityB.getDistance(city)
-                    );
-                }
-
-                break;
-
-            case 4:
                 System.out.println("\n--- ТОЧКИ И ЛОМАНЫЕ ---");
 
                 Point p1 = new Point(0, 0);
